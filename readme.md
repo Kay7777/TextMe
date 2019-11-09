@@ -1,5 +1,9 @@
 # TextMe Backend
 
+## How doea it work?
+Users: this app is for the users who have daily route to work or go to school but tired of checking traffic situation everyday.
+Funtion: users input the departure, destination, and expected duration of the traffic congestion, the server will check traffic situation and calculate specific duration every morning at 6 am, and the server will use SMS message notificate users when the real time is over the expected time. 
+
 ## how to test?
 1. git clone
 2. npm install
@@ -8,10 +12,12 @@
 5. change mogodb database and collections name as yours
 5. node app.js
 
-## add user information API:
+## API:
 http://textme-backend.herokuapp.com/mongodb
 
-## function:
-1. run automatically at everyday 6 am
-2. check every user's route duration 
-3. if today's trffic duration is more than user's expection, the server will send SMS to notificate users.
+## Frontend Information form:
+https://textmeo.herokuapp.com/
+1. input province and city to specify the big area
+2. input departure and destination to get the route with google map api
+3. input the daily time that you start this route
+4. input expected duration of the traffic congestion
