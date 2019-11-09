@@ -17,11 +17,8 @@ getDurationGap = (origins, destinations, departure_time) => {
       departure_time: departureTime
     },
   }).then(res => {
-    console.log(res.data)
     const duration = res.data.rows[0].elements[0].duration.value;
     const durationInTraffic = res.data.rows[0].elements[0].duration_in_traffic.value;
-    console.log(duration)
-    console.log(durationInTraffic)
     let timeGap = Math.floor((durationInTraffic - duration)/60);
     if ((durationInTraffic - duration)%60 >= 20 && (durationInTraffic - duration)%60 <= 40) {
       timeGap += 0.5 } else if ((durationInTraffic - duration)%60 >= 40) { timeGap += 1 };
